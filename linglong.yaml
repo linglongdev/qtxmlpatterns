@@ -1,0 +1,23 @@
+package:
+  id: qtxmlpatterns
+  kind: lib
+  version: 5.11.3
+
+base:
+  id: org.deepin.base
+  version: 20.5.0
+
+depends:
+- id: qtbase
+  version: 5.11.3.15
+
+source:
+  kind: git
+  url: https://github.com/deepin-community/qtxmlpatterns-opensource-src.git
+  version: uos/5.11.3
+  commit: 65da0de57c78f1e00b050628a36d8f2f5c4682a1
+  patch:
+  - disable_network_tests.patch
+  - tst_xmlpatternsvalidator.patch
+build:
+  kind: qmake
